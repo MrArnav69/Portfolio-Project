@@ -1,0 +1,71 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(var(--border), 0.5);
+}
+
+.contentBlock {
+  margin-bottom: 4rem;
+}
+
+.blockTitle {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: rgb(var(--foreground));
+}
+
+.blockSubtitle {
+  display: block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(var(--muted));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.prose {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgb(var(--muted));
+  max-width: 650px;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.courseList, .skillList {
+  font-family: var(--font-inter), sans-serif;
+  color: rgb(var(--muted));
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+}
+
+.courseList li, .skillList li {
+  margin-bottom: 1rem;
+}
+
+.courseList strong, .skillList strong {
+  color: rgb(var(--foreground));
+  font-weight: 500;
+}

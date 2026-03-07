@@ -1,0 +1,90 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(var(--border), 0.5);
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.experienceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.company {
+  font-size: 1.75rem;
+  color: rgb(var(--foreground));
+}
+
+.date {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(var(--foreground));
+}
+
+.itemSubHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--border), 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.role {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(var(--muted));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-style: italic;
+}
+
+.location {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  color: rgb(var(--muted));
+}
+
+.bulletList {
+  font-family: var(--font-inter), sans-serif;
+  color: rgb(var(--muted));
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+}
+
+.bulletList li {
+  margin-bottom: 0.5rem;
+}

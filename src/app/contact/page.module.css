@@ -1,0 +1,68 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(var(--border), 0.5);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.contactCard {
+  border: 1px solid rgba(var(--border), 0.5);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(var(--foreground));
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.contactCard:hover {
+  border-color: rgb(var(--foreground));
+  background: rgba(var(--foreground), 0.02);
+  transform: translateY(-4px);
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+  color: rgb(var(--foreground));
+  opacity: 0.8;
+}
+
+.cardTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.cardValue {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: rgb(var(--muted));
+}

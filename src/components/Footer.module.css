@@ -1,0 +1,65 @@
+.footer {
+  border-top: 1px solid rgba(var(--border), 0.5);
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footerContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footerContainer {
+    flex-direction: row;
+    text-align: left;
+    gap: 0;
+  }
+}
+
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.copyright {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 1.1rem;
+  color: rgb(var(--foreground));
+  margin: 0;
+}
+
+.school {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  color: rgb(var(--muted));
+  margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLink {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(var(--foreground));
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
+}
+
+.socialLink:hover {
+  opacity: 0.5;
+}
