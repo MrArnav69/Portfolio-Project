@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   description: "Portfolio of Arnav Gupta, Independent Researcher and AI/ML Engineer.",
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.ico?v=1', sizes: 'any' },
+      { url: '/favicon.png?v=1', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/favicon.png',
+    shortcut: '/favicon.ico?v=1',
+    apple: '/favicon.png?v=1',
   },
 };
 
