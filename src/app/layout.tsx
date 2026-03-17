@@ -17,6 +17,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Arnav Gupta | Independent Researcher",
   description: "Portfolio of Arnav Gupta, Independent Researcher and AI/ML Engineer.",
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
