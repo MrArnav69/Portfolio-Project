@@ -154,6 +154,14 @@
     min-height: auto;
     padding-top: 4rem;
   }
+  .heroContentWrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .heroImageWrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
   .heroActions {
     flex-direction: column;
     align-items: flex-start;

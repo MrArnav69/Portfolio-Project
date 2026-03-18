@@ -103,3 +103,22 @@
   text-decoration: underline;
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+  .pageTitle {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .projectCard {
+    padding: 1.5rem;
+  }
+  .projectHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
