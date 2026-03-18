@@ -154,6 +154,9 @@
     min-height: auto;
     padding-top: 4rem;
   }
+  .heroTitle {
+    font-size: 2.5rem;
+  }
   .heroContentWrapper {
     grid-template-columns: 1fr;
     gap: 2rem;
