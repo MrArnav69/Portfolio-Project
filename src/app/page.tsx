@@ -26,7 +26,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <motion.div className={styles.heroTop} variants={fadeUpVariant}>
               <span className={styles.heroLabel}>Independent Researcher</span>
-              <span className={styles.heroGpa}>GPA: 3.72</span>
+              <span className={styles.heroGpa}>GPA: 3.87</span>
             </motion.div>
             
             <motion.h1 className={styles.heroTitle} variants={fadeUpVariant}>
