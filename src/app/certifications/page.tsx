@@ -23,7 +23,8 @@ export default function Certifications() {
       <motion.section 
         className={styles.section}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>Honors & Certifications</motion.h1>

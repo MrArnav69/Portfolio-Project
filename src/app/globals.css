@@ -1,9 +1,9 @@
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --muted: #666666;
-  --border: #e5e5e5;
-  --accent: #000000;
+  --background: #fafafa;
+  --foreground: #111111;
+  --muted: #52525b;
+  --border: #e4e4e7;
+  --accent: #111111;
   
   --font-serif: var(--font-eb-garamond), "Times New Roman", Times, serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
@@ -11,11 +11,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-    --muted: #a3a3a3;
-    --border: #262626;
-    --accent: #ffffff;
+    --background: #09090b;
+    --foreground: #fafafa;
+    --muted: #a1a1aa;
+    --border: #27272a;
+    --accent: #fafafa;
   }
 }
 

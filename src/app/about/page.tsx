@@ -22,7 +22,8 @@ export default function About() {
       <motion.section 
         className={styles.section}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>About</motion.h1>
@@ -31,10 +32,10 @@ export default function About() {
           <h2 className={styles.blockTitle}>Abstract</h2>
           <div className={styles.prose}>
             <p>
-              I am a self-taught AI/ML engineer and independent NLP researcher bridging the gap between rigorous academic inquiry and practical, scalable systems. My primary focus lies in enhancing the faithfulness of Large Language Models in abstractive summarization.
+              I am an independent NLP/ML researcher based in Nepal. My research interests span multi-document summarization, faithfulness evaluation, iterative refinement pipelines, and feature selection.
             </p>
             <p>
-              Operating independently alongside my formal high school education, I have developed state-of-the-art evaluation pipelines, contributed to MVP architectures at startups, and engaged with leading minds as an AI Fellow.
+              Operating independently alongside my formal high school education, I have developed state-of-the-art evaluation pipelines, authored papers on NLI-guided iterative refinement, and engaged with leading minds as an AI Fellow. I am also broadly interested in mathematics, physics, and existentialist philosophy, and I publish on productivity and ideas at Medium.
             </p>
           </div>
         </motion.div>
@@ -44,13 +45,10 @@ export default function About() {
           <span className={styles.blockSubtitle}>MIT OpenCourseWare</span>
           <ul className={styles.courseList}>
             <li>
-              <strong>18.01 &ndash; Single Variable Calculus:</strong> Differential and integral calculus with rigorous problem-solving.
+              <strong>18.01 &ndash; Single Variable Calculus (Completed):</strong> Differential and integral calculus with rigorous problem-solving.
             </li>
             <li>
-              <strong>18.06 &ndash; Linear Algebra:</strong> Matrix theory, eigen decomposition, orthogonality, and applications to deep learning.
-            </li>
-            <li>
-              <strong>18.05 &ndash; Introduction to Probability and Statistics:</strong> Probabilistic modeling, Bayesian reasoning, and statistical inference.
+              <strong>18.06 &ndash; Linear Algebra (In Progress):</strong> Matrix theory, eigendecomposition, orthogonality, and applications to deep learning.
             </li>
           </ul>
         </motion.div>
@@ -59,8 +57,9 @@ export default function About() {
           <h2 className={styles.blockTitle}>Technical Skills</h2>
           <ul className={styles.skillList}>
             <li><strong>Languages:</strong> Python, C++, SQL</li>
-            <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn, Plotly, Transformers, Hugging Face, LLMs, TensorFlow, PyTorch</li>
-            <li><strong>Tools & Platforms:</strong> Git/GitHub, Docker, REST APIs, Jupyter, VS Code, Firebase, MySQL, CUDA</li>
+            <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, Transformers, Hugging Face, TensorFlow, PyTorch, OpenCV, DeepFace</li>
+            <li><strong>Tools & Platforms:</strong> Git/GitHub, Docker, REST APIs, Jupyter, VS Code, Firebase, MySQL, CUDA, Obsidian, Zotero, Notion</li>
+            <li><strong>Typesetting & Writing:</strong> LaTeX, Markdown</li>
           </ul>
         </motion.div>
 
@@ -68,13 +67,13 @@ export default function About() {
           <h2 className={styles.blockTitle}>Other Interests</h2>
           <ul className={styles.skillList}>
             <li>
+              <strong>Philosophy & Physics:</strong> Broadly interested in calculus, differential equations, linear algebra, classical mechanics, and existentialist philosophy.
+            </li>
+            <li>
+              <strong>Writing:</strong> Publishes articles on productivity, deep work, and machine learning on Medium (featured in ILLUMINATION).
+            </li>
+            <li>
               <strong>Rubik&apos;s Cube (3x3):</strong> Average: 22.39s | Personal Record: 13.69s
-            </li>
-            <li>
-              <strong>Music:</strong> Alice in Chains, Metallica, Soundgarden, Nirvana, Pearl Jam, Pink Floyd, The Smiths, Fleetwood Mac, The Weeknd, Tame Impala, and others.
-            </li>
-            <li>
-              <strong>Geography & Trivia:</strong> Guessed 143/197 country flags in 18 minutes.
             </li>
           </ul>
         </motion.div>

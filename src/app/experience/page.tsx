@@ -22,7 +22,8 @@ export default function Experience() {
       <motion.section 
         className={styles.section}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>Experience</motion.h1>
@@ -31,17 +32,18 @@ export default function Experience() {
           
           <motion.div className={styles.experienceItem} variants={fadeUpVariant}>
             <div className={styles.itemHeader}>
-              <h2 className={styles.company}>BizLink</h2>
-              <span className={styles.date}>October 2025 - Present</span>
+              <h2 className={styles.company}>Independent Researcher</h2>
+              <span className={styles.date}>2025 - Present</span>
             </div>
             <div className={styles.itemSubHeader}>
-              <span className={styles.role}>AI/ML ENGINEER (NLP & RESEARCH FOCUS)</span>
+              <span className={styles.role}>MACHINE LEARNING & NLP</span>
               <span className={styles.location}>Remote</span>
             </div>
             <ul className={styles.bulletList}>
-              <li>Designed and deployed NLP systems matching SMBs with professional consultants using semantic search and embedding-based retrieval.</li>
-              <li>Developed LLM-based recommendation pipelines, optimizing ranking accuracy and contextual relevance.</li>
-              <li>Integrated AI models into production pipelines with REST APIs and Docker for scalable inference.</li>
+              <li>Conduct independent research spanning multi-document summarization, faithfulness evaluation, and iterative refinement.</li>
+              <li>Designed AnchorSum, a modular training-free summarization pipeline combining entity-guided anchor extraction and dual-mode NLI faithfulness auditing.</li>
+              <li>Empirically documented verifier exploitation in prompt-only iterative refinement and proposed a multi-metric triangulation protocol for its detection.</li>
+              <li>Outperformed fine-tuned encoder-decoder baselines (BART, PEGASUS, PRIMERA) across all LLM-as-judge dimensions using a zero-shot inference-time pipeline.</li>
             </ul>
           </motion.div>
 
