@@ -67,10 +67,16 @@ export default function About() {
           <h2 className={styles.blockTitle}>Other Interests</h2>
           <ul className={styles.skillList}>
             <li>
-              <strong>Philosophy & Physics:</strong> Broadly interested in calculus, differential equations, linear algebra, classical mechanics, and existentialist philosophy.
+              <strong>Mathematics & Physics:</strong> Broadly interested in calculus, differential equations, linear algebra, and classical mechanics.
+            </li>
+            <li>
+              <strong>Philosophy:</strong> Deeply interested in Existentialism, Nihilism, Stoicism, and Pragmatism.
             </li>
             <li>
               <strong>Writing:</strong> Publishes articles on productivity, deep work, and machine learning on Medium (featured in ILLUMINATION).
+            </li>
+            <li>
+              <strong>Geography & Trivia:</strong> Guessed 143/197 country flags in 18 minutes.
             </li>
             <li>
               <strong>Rubik&apos;s Cube (3x3):</strong> Average: 22.39s | Personal Record: 13.69s
