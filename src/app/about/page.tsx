@@ -35,7 +35,7 @@ export default function About() {
               I am an independent NLP/ML researcher based in Nepal. My research interests span multi-document summarization, faithfulness evaluation, iterative refinement pipelines, and feature selection.
             </p>
             <p>
-              Operating independently alongside my formal high school education, I have developed state-of-the-art evaluation pipelines, authored papers on NLI-guided iterative refinement, and engaged with leading minds as an AI Fellow. I am also broadly interested in mathematics, physics, and existentialist philosophy, and I publish on productivity and ideas at Medium.
+              Operating independently alongside my formal high school education, I have developed state-of-the-art evaluation pipelines, authored papers on NLI-guided iterative refinement, and engaged with leading minds as an AI Fellow. I am broadly interested in mathematics and physics — particularly calculus, differential equations, linear algebra, and classical mechanics — and in existentialist philosophy.
             </p>
           </div>
         </motion.div>
@@ -57,7 +57,7 @@ export default function About() {
           <h2 className={styles.blockTitle}>Technical Skills</h2>
           <ul className={styles.skillList}>
             <li><strong>Languages:</strong> Python, C++, SQL</li>
-            <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, Transformers, Hugging Face, TensorFlow, PyTorch, OpenCV, DeepFace</li>
+            <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, XGBoost, Transformers, Hugging Face, TensorFlow, PyTorch, OpenCV, DeepFace</li>
             <li><strong>Tools & Platforms:</strong> Git/GitHub, Docker, REST APIs, Jupyter, VS Code, Firebase, MySQL, CUDA, Obsidian, Zotero, Notion</li>
             <li><strong>Typesetting & Writing:</strong> LaTeX, Markdown</li>
           </ul>

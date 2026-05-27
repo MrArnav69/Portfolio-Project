@@ -72,6 +72,23 @@ export default function Research() {
 
           <motion.div className={styles.projectCard} variants={fadeUpVariant}>
             <div className={styles.projectHeader}>
+              <span className={styles.projectType}>MACHINE LEARNING</span>
+              <span className={styles.projectYear}>2025</span>
+            </div>
+            <h2 className={styles.projectTitle}>House Price Prediction</h2>
+            <ul className={styles.projectBullets}>
+              <li>Built a regression pipeline on the Ames Housing dataset covering EDA, data cleaning, and complex feature engineering.</li>
+              <li>Compared Ridge Regression against tuned XGBoost (CV RMSE_log 0.1229) using GridSearchCV with cross-validation.</li>
+            </ul>
+            <div className={styles.projectLinks}>
+              <a href="https://github.com/MrArnav69/House-Price-Prediction" target="_blank" rel="noreferrer" className={styles.projectLink}>
+                View Repository &rarr;
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div className={styles.projectCard} variants={fadeUpVariant}>
+            <div className={styles.projectHeader}>
               <span className={styles.projectType}>DATA VISUALIZATION</span>
               <span className={styles.projectYear}>2026</span>
             </div>
