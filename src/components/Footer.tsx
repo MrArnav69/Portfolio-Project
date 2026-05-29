@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.footerContainer}>
         <div className={styles.footerInfo}>
           <p className={styles.copyright}>&copy; {currentYear} Arnav Gupta.</p>
-          <p className={styles.school}>Sagarmatha Secondary School, Nepal</p>
+          <p className={styles.school}>Sagarmatha Secondary School, Mirchaiya, Nepal</p>
         </div>
         <div className={styles.socialLinks}>
           <a href="https://github.com/MrArnav69" target="_blank" rel="noreferrer" className={styles.socialLink}>GitHub</a>

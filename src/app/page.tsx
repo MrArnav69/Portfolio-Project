@@ -35,7 +35,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.p className={styles.heroContext} variants={fadeUpVariant}>
-              Grade 10 student at <a href="https://sagarmathaschoolmirchaiya.edu.np/" target="_blank" rel="noreferrer">Sagarmatha Secondary School</a>, Nepal. Investigating Multi-Document Abstractive Summarization and Natural Language Processing.
+              Grade 10 student at <a href="https://sagarmathaschoolmirchaiya.edu.np/" target="_blank" rel="noreferrer">Sagarmatha Secondary School</a>, Mirchaiya, Nepal. Investigating Multi-Document Abstractive Summarization and Natural Language Processing.
             </motion.p>
 
             <motion.div className={styles.heroActions} variants={fadeUpVariant}>
