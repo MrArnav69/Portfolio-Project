@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=1', sizes: 'any' },
-      { url: '/favicon.png?v=1', type: 'image/png' },
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=2', sizes: 'any' },
     ],
-    shortcut: '/favicon.ico?v=1',
-    apple: '/favicon.png?v=1',
+    shortcut: '/favicon.svg?v=2',
+    apple: '/favicon.png?v=2',
   },
 };
 
