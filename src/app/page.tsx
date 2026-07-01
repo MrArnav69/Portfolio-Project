@@ -62,8 +62,8 @@ export default function Home() {
               <span className={styles.dossierLabel}>INSTITUTION</span>
             </div>
             <div className={styles.dossierItem}>
-              <span className={styles.dossierValue}>EST.</span>
-              <span className={styles.dossierLabel}>2025</span>
+              <span className={styles.dossierValue}>FIFTEEN</span>
+              <span className={styles.dossierLabel}>YEARS OLD</span>
             </div>
           </motion.div>
 
@@ -73,8 +73,7 @@ export default function Home() {
               Arnav<br />Gupta.
             </h1>
             <p className={styles.heroStatement}>
-              Investigating when the spectral and geometric character of learned representations 
-              determines what a system can and cannot do.
+              Mapping the limits of artificial reasoning. My research audits the geometric structures of learned representations and the failure modes of iterative refinement.
             </p>
             <div className={styles.heroActions}>
               <Link href="/about" className={styles.primaryAction}>
