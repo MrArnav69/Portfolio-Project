@@ -1,0 +1,38 @@
+/* ─── Scroll-to-Top Button ─── */
+
+.btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ink);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  z-index: 50;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 38px;
+    height: 38px;
+  }
+}

@@ -26,63 +26,139 @@ export default function About() {
         viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
-        <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>About</motion.h1>
+        <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>Biography</motion.h1>
 
-        <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
-          <h2 className={styles.blockTitle}>Abstract</h2>
-          <div className={styles.prose}>
-            <p>
-              I am an independent NLP/ML researcher based in Nepal. My research interests span multi-document summarization, faithfulness evaluation, iterative refinement pipelines, and feature selection.
-            </p>
-            <p>
-              Operating independently alongside my formal high school education, I have developed state-of-the-art evaluation pipelines, authored papers on NLI-guided iterative refinement, and engaged with leading minds as an AI Fellow. I am broadly interested in mathematics and physics — particularly calculus, differential equations, linear algebra, and classical mechanics — and in existentialist philosophy.
-            </p>
+        <div className={styles.layoutGrid}>
+          
+          {/* ── Left Sidebar: Quick Facts ── */}
+          <motion.aside className={styles.sidebar} variants={fadeUpVariant}>
+            <div className={styles.factGroup}>
+              <h3 className={styles.factLabel}>Status</h3>
+              <p className={styles.factValue}>Independent Researcher</p>
+            </div>
+            
+            <div className={styles.factGroup}>
+              <h3 className={styles.factLabel}>Location</h3>
+              <p className={styles.factValue}>Nepal</p>
+            </div>
+            
+            <div className={styles.factGroup}>
+              <h3 className={styles.factLabel}>Current Level</h3>
+              <p className={styles.factValue}>Grade 10 · 15 years old</p>
+            </div>
+
+            <div className={styles.factGroup}>
+              <h3 className={styles.factLabel}>Research Focus</h3>
+              <p className={styles.factValue}>
+                Geometric and spectral properties of learned representations; NLI auditing in iterative refinement.
+              </p>
+            </div>
+
+            <div className={styles.factGroup}>
+              <h3 className={styles.factLabel}>Correspondence</h3>
+              <p className={styles.factValue}>
+                <a href="mailto:arnav.gupta.ai@outlook.com" className={styles.sidebarLink}>arnav.gupta.ai@outlook.com</a>
+              </p>
+            </div>
+          </motion.aside>
+
+          {/* ── Right Column: Narrative ── */}
+          <div className={styles.mainColumn}>
+            
+            <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
+              <div className={styles.prose}>
+                <p className="dropcap">
+                  My work is animated by a structural question: when does the spectral and geometric character of a learned representation determine what a learning system can and cannot do — and what does that imply about when pipelines will fail?
+                </p>
+                <p>
+                  My research pursues this from complementary angles. One preprint (arXiv, 2026) introduces a label-free saturation index <em>S(K) = erank(Σ̂⁽ᴷ⁾_W)/K</em>, grounded in classical high-dimensional covariance estimation, to predict annotation diminishing returns in binary few-shot classification. The other (Research Square, 2026) provides the first controlled empirical documentation of verifier exploitation in NLI-guided iterative refinement.
+                </p>
+              </div>
+
+              <blockquote className={styles.pullQuote}>
+                Operating without institutional affiliation, advisor, or supervised compute — from Nepal, at fifteen.
+              </blockquote>
+
+              <div className={styles.prose}>
+                <p>
+                  Both investigations were conducted independently, alongside a full formal school curriculum, without access to institutional compute, an academic supervisor, or a research group. All code, methodology, and writing is my own. I build the systems I study from first principles, emphasizing rigorous empirical evaluation and theoretical grounding.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* ── Technical Skills ── */}
+            <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
+              <h2 className={styles.blockTitle}>Technical Stack</h2>
+              <dl className={styles.skillGrid}>
+                <div className={styles.skillRow}>
+                  <dt className={styles.skillCategory}>Languages</dt>
+                  <dd className={styles.skillItems}>Python, C++, SQL</dd>
+                </div>
+                <div className={styles.skillRow}>
+                  <dt className={styles.skillCategory}>Libraries</dt>
+                  <dd className={styles.skillItems}>PyTorch, TensorFlow, Hugging Face Transformers, Scikit-learn, NumPy, Pandas, Matplotlib, XGBoost</dd>
+                </div>
+                <div className={styles.skillRow}>
+                  <dt className={styles.skillCategory}>Tools</dt>
+                  <dd className={styles.skillItems}>Git, Docker, CUDA, REST APIs, LaTeX, Obsidian, Zotero</dd>
+                </div>
+              </dl>
+            </motion.div>
+
+            {/* ── Mathematics Coursework ── */}
+            <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
+              <h2 className={styles.blockTitle}>Mathematics</h2>
+              <span className={styles.blockSubtitle}>MIT OpenCourseWare — Self-Directed</span>
+              <div className={styles.courseGrid}>
+                <div className={styles.courseCard}>
+                  <span className={styles.courseNumber}>18.01</span>
+                  <div className={styles.courseInfo}>
+                    <span className={styles.courseName}>Single Variable Calculus</span>
+                    <span className={styles.courseDetail}>Differential and integral calculus with rigorous problem-solving.</span>
+                  </div>
+                  <span className={styles.courseStatus}>Completed</span>
+                </div>
+                <div className={styles.courseCard}>
+                  <span className={styles.courseNumber}>18.06</span>
+                  <div className={styles.courseInfo}>
+                    <span className={styles.courseName}>Linear Algebra</span>
+                    <span className={styles.courseDetail}>Matrix theory, eigendecomposition, orthogonality, and ML applications.</span>
+                  </div>
+                  <span className={`${styles.courseStatus} ${styles.inProgress}`}>In Progress</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ── Other Interests ── */}
+            <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
+              <h2 className={styles.blockTitle}>Other Pursuits</h2>
+
+              <div className={styles.interestGrid}>
+                <div className={styles.interestBlock}>
+                  <h3 className={styles.interestTitle}>Philosophy</h3>
+                  <p className={styles.interestText}>
+                    Deeply drawn to Existentialism and Absurdism — confronting the questions of meaning and authenticity. I publish essays on these themes on <a href="https://substack.com/@mrarnav69" target="_blank" rel="noreferrer">Substack</a>.
+                  </p>
+                </div>
+
+                <div className={styles.interestBlock}>
+                  <h3 className={styles.interestTitle}>Mathematics &amp; Physics</h3>
+                  <p className={styles.interestText}>
+                    Captivated by the formal structures underlying the physical world, which continuously informs my approach to machine learning at a foundational level.
+                  </p>
+                </div>
+
+                <div className={styles.interestBlock}>
+                  <h3 className={styles.interestTitle}>Speedcubing &amp; Trivia</h3>
+                  <p className={styles.interestText}>
+                    3×3 Rubik&apos;s Cube average: 22.39s (PR 13.69s). Geography enthusiast (guessed 143/197 flags in 18 minutes).
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
-        </motion.div>
-
-        <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
-          <h2 className={styles.blockTitle}>Mathematics Coursework</h2>
-          <span className={styles.blockSubtitle}>MIT OpenCourseWare</span>
-          <ul className={styles.courseList}>
-            <li>
-              <strong>18.01 &ndash; Single Variable Calculus (Completed):</strong> Differential and integral calculus with rigorous problem-solving.
-            </li>
-            <li>
-              <strong>18.06 &ndash; Linear Algebra (In Progress):</strong> Matrix theory, eigendecomposition, orthogonality, and applications to deep learning.
-            </li>
-          </ul>
-        </motion.div>
-
-        <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
-          <h2 className={styles.blockTitle}>Technical Skills</h2>
-          <ul className={styles.skillList}>
-            <li><strong>Languages:</strong> Python, C++, SQL</li>
-            <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, XGBoost, Transformers, Hugging Face, TensorFlow, PyTorch, OpenCV, DeepFace</li>
-            <li><strong>Tools & Platforms:</strong> Git/GitHub, Docker, REST APIs, Jupyter, VS Code, Firebase, MySQL, CUDA, Obsidian, Zotero, Notion</li>
-            <li><strong>Typesetting & Writing:</strong> LaTeX, Markdown</li>
-          </ul>
-        </motion.div>
-
-        <motion.div className={styles.contentBlock} variants={fadeUpVariant}>
-          <h2 className={styles.blockTitle}>Other Interests</h2>
-          <ul className={styles.skillList}>
-            <li>
-              <strong>Mathematics & Physics:</strong> Broadly interested in calculus, differential equations, linear algebra, and classical mechanics.
-            </li>
-            <li>
-              <strong>Philosophy:</strong> Deeply interested in Existentialism, Nihilism, Stoicism, and Pragmatism.
-            </li>
-            <li>
-              <strong>Writing:</strong> Publishes articles on productivity, deep work, and machine learning on Medium (featured in ILLUMINATION).
-            </li>
-            <li>
-              <strong>Geography & Trivia:</strong> Guessed 143/197 country flags in 18 minutes.
-            </li>
-            <li>
-              <strong>Rubik&apos;s Cube (3x3):</strong> Average: 22.39s | Personal Record: 13.69s
-            </li>
-          </ul>
-        </motion.div>
+        </div>
 
       </motion.section>
     </main>

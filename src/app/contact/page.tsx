@@ -2,20 +2,20 @@
 
 import { motion, Variants } from "framer-motion";
 import styles from "./page.module.css";
-import { Github, Linkedin, Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Instagram, Facebook, Mail, Phone, Newspaper, BookOpen, GraduationCap, Twitter } from "lucide-react";
 
 export default function Contact() {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
   const fadeUpVariant: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
@@ -28,37 +28,46 @@ export default function Contact() {
       >
         <motion.h1 className={styles.pageTitle} variants={fadeUpVariant}>Contact</motion.h1>
 
-        <motion.div className={styles.contactGrid} variants={containerVariants}>
-          <motion.a 
-            href="mailto:arnavgupta6969@icloud.com" 
-            className={styles.contactCard}
-            variants={fadeUpVariant}
-          >
-            <Mail size={32} strokeWidth={1.5} className={styles.icon} />
-            <h2 className={styles.cardTitle}>Email</h2>
-            <span className={styles.cardValue}>arnavgupta6969@icloud.com</span>
-          </motion.a>
+        <motion.p className={styles.openingStatement} variants={fadeUpVariant}>
+          For research collaborations, academic correspondence, preprint feedback, or general enquiries.
+        </motion.p>
+
+        {/* ── Academic & Professional ── */}
+        <motion.p className={styles.sectionLabel} variants={fadeUpVariant}>Academic &amp; Professional</motion.p>
+        <motion.div className={styles.contactList} variants={containerVariants}>
 
           <motion.a 
-            href="tel:+9779863744666" 
-            className={styles.contactCard}
-            variants={fadeUpVariant}
-          >
-            <Phone size={32} strokeWidth={1.5} className={styles.icon} />
-            <h2 className={styles.cardTitle}>Phone</h2>
-            <span className={styles.cardValue}>+977 9863744666</span>
-          </motion.a>
-
-          <motion.a 
-            href="https://github.com/MrArnav69" 
-            target="_blank" 
+            href="https://orcid.org/0009-0003-0592-2530"
+            target="_blank"
             rel="noreferrer"
             className={styles.contactCard}
             variants={fadeUpVariant}
           >
-            <Github size={32} strokeWidth={1.5} className={styles.icon} />
-            <h2 className={styles.cardTitle}>GitHub</h2>
-            <span className={styles.cardValue}>@MrArnav69</span>
+            <BookOpen size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>ORCID</h2>
+            <span className={styles.cardValue}>0009-0003-0592-2530</span>
+          </motion.a>
+
+          <motion.a 
+            href="https://scholar.google.com/citations?user=0ZMfzKcAAAAJ&hl=en"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <GraduationCap size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>Google Scholar</h2>
+            <span className={styles.cardValue}>Arnav Gupta</span>
+          </motion.a>
+
+          <motion.a 
+            href="mailto:arnav.gupta.ai@outlook.com" 
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Mail size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>Academic Email</h2>
+            <span className={styles.cardValue}>arnav.gupta.ai@outlook.com</span>
           </motion.a>
 
           <motion.a 
@@ -68,9 +77,71 @@ export default function Contact() {
             className={styles.contactCard}
             variants={fadeUpVariant}
           >
-            <Linkedin size={32} strokeWidth={1.5} className={styles.icon} />
+            <Linkedin size={18} strokeWidth={1.5} className={styles.icon} />
             <h2 className={styles.cardTitle}>LinkedIn</h2>
             <span className={styles.cardValue}>in/mrarnav69</span>
+          </motion.a>
+
+          <motion.a 
+            href="https://github.com/MrArnav69" 
+            target="_blank" 
+            rel="noreferrer"
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Github size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>GitHub</h2>
+            <span className={styles.cardValue}>@MrArnav69</span>
+          </motion.a>
+
+          <motion.a 
+            href="https://x.com/MrArnav69" 
+            target="_blank" 
+            rel="noreferrer"
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Twitter size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>X / Twitter</h2>
+            <span className={styles.cardValue}>@MrArnav69</span>
+          </motion.a>
+
+        </motion.div>
+
+        {/* ── Personal ── */}
+        <motion.p className={styles.sectionLabel} variants={fadeUpVariant}>Personal</motion.p>
+        <motion.div className={styles.contactList} variants={containerVariants}>
+
+          <motion.a 
+            href="mailto:arnavgupta6969@icloud.com" 
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Mail size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>Personal Email</h2>
+            <span className={styles.cardValue}>arnavgupta6969@icloud.com</span>
+          </motion.a>
+
+          <motion.a 
+            href="tel:+9779863744666" 
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Phone size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>Phone</h2>
+            <span className={styles.cardValue}>+977 9863744666</span>
+          </motion.a>
+
+          <motion.a 
+            href="https://substack.com/@mrarnav69" 
+            target="_blank" 
+            rel="noreferrer"
+            className={styles.contactCard}
+            variants={fadeUpVariant}
+          >
+            <Newspaper size={18} strokeWidth={1.5} className={styles.icon} />
+            <h2 className={styles.cardTitle}>Substack</h2>
+            <span className={styles.cardValue}>@mrarnav69</span>
           </motion.a>
 
           <motion.a 
@@ -80,7 +151,7 @@ export default function Contact() {
             className={styles.contactCard}
             variants={fadeUpVariant}
           >
-            <Instagram size={32} strokeWidth={1.5} className={styles.icon} />
+            <Instagram size={18} strokeWidth={1.5} className={styles.icon} />
             <h2 className={styles.cardTitle}>Instagram</h2>
             <span className={styles.cardValue}>@mrarnav69</span>
           </motion.a>
@@ -92,7 +163,7 @@ export default function Contact() {
             className={styles.contactCard}
             variants={fadeUpVariant}
           >
-            <Facebook size={32} strokeWidth={1.5} className={styles.icon} />
+            <Facebook size={18} strokeWidth={1.5} className={styles.icon} />
             <h2 className={styles.cardTitle}>Facebook</h2>
             <span className={styles.cardValue}>Arnav Gupta</span>
           </motion.a>

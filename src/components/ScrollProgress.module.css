@@ -1,0 +1,13 @@
+/* ─── Scroll Progress Bar ─── */
+
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--accent);
+  z-index: 200;
+  transition: width 0.08s linear;
+  transform-origin: left;
+  pointer-events: none;
+}

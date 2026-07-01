@@ -1,85 +1,329 @@
+/* ─── About Page ─── */
+
 .main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .section {
-  padding: 2rem;
-  max-width: 800px;
+  padding: 5rem 3rem;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
+/* Page title with accent underline */
 .pageTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  line-height: 1;
   letter-spacing: -0.03em;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(var(--border), 0.5);
+  margin-bottom: 0.75rem;
+  color: var(--ink);
 }
 
+.pageTitle::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  background-color: var(--accent);
+  margin-top: 1rem;
+  margin-bottom: 3.5rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineReveal 0.55s 0.45s ease forwards;
+}
+
+/* ── Editorial 2-Column Layout ── */
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.factGroup {
+  margin-bottom: 1.5rem;
+}
+
+.factLabel {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.factValue {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.sidebarLink {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s ease;
+}
+
+.sidebarLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Main Column ── */
+.mainColumn {
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+}
+
+/* Content blocks separated by horizontal rules */
 .contentBlock {
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.contentBlock:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .blockTitle {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-  color: rgb(var(--foreground));
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--ink);
 }
 
 .blockSubtitle {
   display: block;
-  font-family: var(--font-inter), sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  color: rgb(var(--muted));
+  color: var(--ink-faint);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.13em;
+  margin-top: -1.25rem;
+  margin-bottom: 2rem;
 }
 
+/* Long-form prose */
 .prose {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: rgb(var(--muted));
-  max-width: 650px;
+  font-size: 1.12rem;
+  line-height: 1.88;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
 }
 
 .prose p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.courseList, .skillList {
-  font-family: var(--font-inter), sans-serif;
-  color: rgb(var(--muted));
-  font-size: 1rem;
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+/* Pull-quote — the centrepiece of the biography */
+.pullQuote {
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink);
+  border-left: 3px solid var(--accent);
+  padding-left: 2rem;
+  margin: 3rem 0;
+  quotes: none;
+}
+
+/* ── 2-column skills definition grid ── */
+.skillGrid {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+  padding: 0;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.skillCategory {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.skillItems {
+  font-size: 0.95rem;
   line-height: 1.7;
-  padding-left: 1.5rem;
+  color: var(--ink-muted);
+  margin: 0;
 }
 
-.courseList li, .skillList li {
+/* ── Editorial course cards ── */
+.courseGrid {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+}
+
+.courseCard {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.courseNumber {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  font-style: normal;
+}
+
+.courseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.courseName {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.courseDetail {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.courseStatus {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.inProgress {
+  color: var(--accent);
+}
+
+/* ── Interests as prose blocks ── */
+.interestGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+}
+
+.interestBlock {
   margin-bottom: 1rem;
 }
 
-.courseList strong, .skillList strong {
-  color: rgb(var(--foreground));
-  font-weight: 500;
+.interestTitle {
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.65rem;
+  font-weight: 600;
+}
+
+.interestText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+}
+
+.interestText a {
+  color: var(--accent);
+  border-bottom: 1px solid rgba(10, 54, 157, 0.3);
+  padding-bottom: 1px;
+  opacity: 1;
+}
+
+.interestText a:hover {
+  opacity: 0.7;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.5rem;
+  }
+  
+  .factGroup {
+    margin-bottom: 0;
+  }
+
+  .mainColumn {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
-  .pageTitle {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+
+  .sidebar {
+    grid-template-columns: 1fr;
   }
+
   .contentBlock {
     margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .skillRow {
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+  }
+
+  .courseCard {
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+  }
+
+  .courseStatus {
+    display: none;
   }
 }

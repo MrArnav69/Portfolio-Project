@@ -1,109 +1,177 @@
+/* ─── Experience Page ─── */
+
 .main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .section {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 5rem 3rem;
+  max-width: 920px;
   margin: 0 auto;
   width: 100%;
 }
 
+/* Page title */
 .pageTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  line-height: 1;
   letter-spacing: -0.03em;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(var(--border), 0.5);
+  margin-bottom: 0.75rem;
+  color: var(--ink);
 }
 
+.pageTitle::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  background-color: var(--accent);
+  margin-top: 1rem;
+  margin-bottom: 3.5rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineReveal 0.55s 0.45s ease forwards;
+}
+
+/* Timeline list */
 .experienceList {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
 }
 
 .experienceItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--rule);
 }
 
+.experienceItem:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+/* Featured entry — the Independent Researcher */
+.featured {
+  background-color: var(--surface);
+  padding: 3rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  border-top: 2px solid var(--ink) !important;
+  border-bottom: 1px solid var(--rule) !important;
+}
+
+/* Header row: Company — Date */
 .itemHeader {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.company {
-  font-size: 1.75rem;
-  color: rgb(var(--foreground));
-}
-
-.date {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgb(var(--foreground));
-}
-
-.itemSubHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(var(--border), 0.3);
-  padding-bottom: 0.5rem;
-}
-
-.role {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: rgb(var(--muted));
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-style: italic;
-}
-
-.location {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 0.85rem;
-  color: rgb(var(--muted));
-}
-
-.bulletList {
-  font-family: var(--font-inter), sans-serif;
-  color: rgb(var(--muted));
-  font-size: 0.95rem;
-  line-height: 1.7;
-  padding-left: 1.5rem;
-}
-
-.bulletList li {
   margin-bottom: 0.5rem;
 }
 
+.company {
+  font-size: 2rem;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.featured .company {
+  font-size: 2.35rem;
+}
+
+.date {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+/* Sub-header: Role */
+.itemSubHeader {
+  margin-bottom: 1.5rem;
+}
+
+.role {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+/* Accent pill for the featured entry */
+.rolePill {
+  display: inline-block;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  padding: 0.3rem 0.85rem;
+  font-size: 0.65rem;
+}
+
+/* Research focus statement — only on featured entry */
+.focusStatement {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+  max-width: 680px;
+}
+
+/* Bullets with em-dash */
+.bulletList {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.82;
+  list-style: none;
+  padding: 0;
+}
+
+.bulletList li {
+  margin-bottom: 0.85rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bulletList li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1.82;
+}
+
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
   .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .experienceItem {
+    padding: 2.5rem 0;
+  }
+
+  .featured {
     padding: 2rem 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
-  .pageTitle {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+
+  .company {
+    font-size: 1.65rem;
   }
-  .experienceList {
-    gap: 3rem;
+
+  .featured .company {
+    font-size: 1.8rem;
   }
-  .itemSubHeader {
+
+  .itemHeader {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .itemSubHeader {
+    margin-bottom: 1.25rem;
   }
 }
