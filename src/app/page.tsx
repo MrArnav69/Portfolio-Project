@@ -29,7 +29,7 @@ export default function Home() {
 
   const stripLinks = [
     { tag: "Biography", title: "Research, philosophy & intellectual formation", href: "/about" },
-    { tag: "Publications", title: "Two preprints on representation geometry & iterative refinement", href: "/publications" },
+    { tag: "Publications", title: "Spectral saturation index & verifier exploitation preprints", href: "/publications" },
     { tag: "Projects", title: "NietzscheGPT, Transformers & geometric visualization", href: "/projects" },
     { tag: "Experience", title: "Harvard AI Fellowship, ML Internship & independent research", href: "/experience" },
     { tag: "Credentials", title: "Harvard AI Fellowship, internships & certifications", href: "/credentials" },

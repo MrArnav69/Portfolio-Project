@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "Arnav Gupta | Independent Researcher",
     template: "%s — Arnav Gupta",
   },
-  description: "Independent ML researcher from Nepal. Work on spectral geometry of learned representations, few-shot classification, and faithfulness in iterative refinement pipelines.",
+  description: "Independent ML researcher from Nepal. Work on spectral saturation for few-shot label acquisition, representation geometry, and faithfulness in iterative refinement pipelines.",
   openGraph: {
     type: "website",
     siteName: "Arnav Gupta",

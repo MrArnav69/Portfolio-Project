@@ -32,7 +32,7 @@ export default function Projects() {
         <motion.div className={styles.featuredCard} variants={fadeUpVariant}>
           <div className={styles.projectHeader}>
             <span className={styles.projectType}>PHILOSOPHICAL TEXT GENERATION</span>
-            <span className={styles.projectYear}>2025</span>
+            <span className={styles.projectYear}>2026</span>
           </div>
           <h2 className={styles.featuredTitle}>NietzscheGPT</h2>
           <p className={styles.projectProse}>

@@ -71,7 +71,7 @@ export default function About() {
                   My work is animated by a structural question: when does the spectral and geometric character of a learned representation determine what a learning system can and cannot do — and what does that imply about when pipelines will fail?
                 </p>
                 <p>
-                  My research pursues this from complementary angles. One preprint (arXiv, 2026) introduces a label-free saturation index <em>S(K) = erank(Σ̂⁽ᴷ⁾_W)/K</em>, grounded in classical high-dimensional covariance estimation, to predict annotation diminishing returns in binary few-shot classification. The other (Research Square, 2026) provides the first controlled empirical documentation of verifier exploitation in NLI-guided iterative refinement.
+                  My research pursues this from complementary angles. One preprint (arXiv, 2026) introduces the spectral saturation index <em>S(K) = erank(Σ̂⁽ᴷ⁾_W)/K</em>, a label-free stopping rule for few-shot label acquisition validated across 49 tasks and three backbones. The other (Research Square, 2026) provides the first controlled empirical documentation of verifier exploitation in NLI-guided iterative refinement.
                 </p>
               </div>
 

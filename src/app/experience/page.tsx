@@ -46,7 +46,7 @@ export default function Experience() {
               <li>Designed AnchorSum, a modular training-free summarization pipeline combining entity-guided anchor extraction and dual-mode NLI faithfulness auditing.</li>
               <li>Empirically documented verifier exploitation in prompt-only iterative refinement and proposed a multi-metric triangulation protocol for its detection.</li>
               <li>Outperformed fine-tuned encoder-decoder baselines (BART, PEGASUS, PRIMERA) across all LLM-as-judge dimensions using a zero-shot inference-time pipeline.</li>
-              <li>Introduced the saturation index S(K) for binary few-shot classification — a closed-form, label-free scalar predicting annotation diminishing returns.</li>
+              <li>Introduced the spectral saturation index S(K) — a closed-form, label-free stopping rule for few-shot label acquisition, validated across 49 real tasks (binary, 5-way, 10-way) and three frozen backbones.</li>
             </ul>
           </motion.div>
 
